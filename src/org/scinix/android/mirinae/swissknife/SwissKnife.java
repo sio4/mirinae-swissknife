@@ -28,6 +28,6 @@ public class SwissKnife extends TabActivity {
 				res.getDrawable(R.drawable.ic_tab_tweak)).setContent(intent);
 		tabHost.addTab(spec);
 
-		tabHost.setCurrentTab(2);
+		tabHost.setCurrentTab(0);
 	}
 }

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, SwissKnife!</string>
-    <string name="app_name">Mirinae SwissKnife</string>
+	<string name="hello">Hello World, SwissKnife!</string>
+	<string name="app_name">Mirinae SwissKnife</string>
+	<string name="apps_label">System Apps</string>
+	<string name="apps_select">All or Nothing!</string>
+	<string name="apps_enable">Enable</string>
+	<string name="apps_disable">Disable</string>
 </resources>
