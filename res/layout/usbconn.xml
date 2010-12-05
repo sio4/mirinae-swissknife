@@ -5,7 +5,15 @@
 
 	<TextView android:text="@string/usbconn_desc"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_weight="0"
 		android:layout_marginBottom="5dip"/>
+
+	<ScrollView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_weight="1">
+		<TextView android:text="@string/usbconn_usage"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textSize="12sp" android:paddingLeft="10dip"/>
+	</ScrollView>
 
 	<TableLayout android:layout_weight="0"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
@@ -34,12 +42,5 @@
 			android:layout_height="wrap_content" android:layout_width="0.0dip"
 			android:layout_weight="1.0" />
 	</LinearLayout>
-
-	<ScrollView android:layout_width="wrap_content"
-		android:layout_height="fill_parent" android:layout_weight="0.0">
-		<TextView android:text="@string/usbconn_usage"
-			android:layout_width="fill_parent" android:layout_height="wrap_content"
-			android:textSize="12sp" android:padding="5dip"/>
-	</ScrollView>
 
 </LinearLayout>
