@@ -28,6 +28,11 @@ public class SwissKnife extends TabActivity {
 				res.getDrawable(R.drawable.ic_tab_tweak)).setContent(intent);
 		tabHost.addTab(spec);
 
+		intent = new Intent().setClass(this, SwissKnifeUSBConn.class)
+				.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		spec = tabHost.newTabSpec("usbconn").setIndicator("USB Conn",
+				res.getDrawable(R.drawable.ic_tab_usbconn)).setContent(intent);
+		tabHost.addTab(spec);
 		tabHost.setCurrentTab(0);
 	}
 }

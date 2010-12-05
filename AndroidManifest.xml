@@ -18,5 +18,10 @@
 		<activity android:name=".SwissKnifeTweak" android:label="@string/app_name">
 			<intent-filter />
 		</activity>
+
+		<activity android:name=".SwissKnifeUSBConn" android:label="@string/app_name">
+			<intent-filter />
+		</activity>
+
 	</application>
 </manifest> 
