@@ -15,12 +15,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SwissKnifeUSBConn extends Activity implements OnClickListener {
+public class SwissKnifeRTether extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.usbconn);
+		setContentView(R.layout.rtether);
 
 		Method spGet;
 		String wifiStatus = new String ();
@@ -51,10 +51,25 @@ public class SwissKnifeUSBConn extends Activity implements OnClickListener {
 
 			String dns1 = (String) spGet.invoke(null, "net.dns1");
 			if (dns1.length() > 7) {		/* need more validations? */ 
-				((EditText) findViewById(R.id.usbconn_dns)).setText(dns1);
+				((EditText) findViewById(R.id.rtether_dns)).setText(dns1);
 				Toast.makeText(this, "Using current dns : " + dns1, Toast.LENGTH_LONG).show();
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		/* get peer address from dnsmasq's log message. */
+		try {
+			String line;
+			String cmd = "logcat -d |busybox grep -v grep |busybox grep DHCPACK |busybox tail -1|busybox cut -d' ' -f4";
+			Process p = Runtime.getRuntime().exec(new String[] {"su", "-c", cmd});
+			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			while ((line = input.readLine()) != null) {
+				Log.d("SwissKnife", "### PEER address: " + line);
+				((EditText) findViewById(R.id.rtether_gateway)).setText(line);
+			}
+			input.close();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -66,19 +81,18 @@ public class SwissKnifeUSBConn extends Activity implements OnClickListener {
 
 	public void onClick(View v) {
 		if (v.getId() == R.id.btn_reset) {
-			((EditText) findViewById(R.id.usbconn_gateway)).setText(R.string.usbconn_gateway_value);
-			((EditText) findViewById(R.id.usbconn_dns)).setText(R.string.usbconn_dns_value);
+			((EditText) findViewById(R.id.rtether_dns)).setText(R.string.rtether_dns_value);
 			return;
 		}
 
-		String v_gw = ((TextView) findViewById(R.id.usbconn_gateway)).getText().toString();
-		String v_dns = ((TextView) findViewById(R.id.usbconn_dns)).getText().toString();
+		String v_gw = ((TextView) findViewById(R.id.rtether_gateway)).getText().toString();
+		String v_dns = ((TextView) findViewById(R.id.rtether_dns)).getText().toString();
 		String cmd =
 			"busybox route delete default ;"
 			+ "busybox route add default gw " + v_gw + ";"
 			+ "setprop net.dns1 " + v_dns;
 
-		Toast.makeText(this, R.string.usbconn_apply_toast, Toast.LENGTH_LONG).show();
+		Toast.makeText(this, R.string.rtether_apply_toast, Toast.LENGTH_LONG).show();
 		try {
 			String line;
 			Process p = Runtime.getRuntime().exec(new String[] {"su", "-c", cmd});

@@ -3,14 +3,14 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:orientation="vertical">
 
-	<TextView android:text="@string/usbconn_desc"
+	<TextView android:text="@string/rtether_desc"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:layout_weight="0"
 		android:layout_marginBottom="5dip"/>
 
 	<ScrollView android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:layout_weight="1">
-		<TextView android:text="@string/usbconn_usage"
+		<TextView android:text="@string/rtether_usage"
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
 			android:textSize="12sp" android:paddingLeft="10dip"/>
 	</ScrollView>
@@ -19,26 +19,25 @@
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:layout_marginTop="15dip" android:stretchColumns="1">
 		<TableRow>
-			<TextView android:text="@string/usbconn_gateway" />
-			<EditText android:id="@+id/usbconn_gateway"
-				android:text="@string/usbconn_gateway_value"
+			<TextView android:text="@string/rtether_gateway" />
+			<EditText android:id="@+id/rtether_gateway"
 				android:layout_width="fill_parent" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="@string/usbconn_dns" />
-			<EditText android:id="@+id/usbconn_dns"
-				android:text="@string/usbconn_dns_value"
+			<TextView android:text="@string/rtether_dns" />
+			<EditText android:id="@+id/rtether_dns"
+				android:text="@string/rtether_dns_value"
 				android:layout_width="fill_parent" />
 		</TableRow>
 	</TableLayout>
 
-	<LinearLayout android:id="@+id/usbconn_buttons"
+	<LinearLayout android:id="@+id/rtether_buttons"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:layout_weight="0" android:layout_gravity="bottom" >
-		<Button android:text="@string/usbconn_apply" android:id="@+id/btn_apply"
+		<Button android:text="@string/rtether_apply" android:id="@+id/btn_apply"
 			android:layout_height="wrap_content" android:layout_width="0.0dip"
 			android:layout_weight="1.0" />
-		<Button android:text="@string/usbconn_reset" android:id="@+id/btn_reset"
+		<Button android:text="@string/rtether_reset" android:id="@+id/btn_reset"
 			android:layout_height="wrap_content" android:layout_width="0.0dip"
 			android:layout_weight="1.0" />
 	</LinearLayout>

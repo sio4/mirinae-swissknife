@@ -7,31 +7,31 @@
 	<string name="apps_enable">Enable</string>
 	<string name="apps_disable">Disable</string>
 
-	<string name="usbconn_gateway">Gateway :  </string>
-	<string name="usbconn_gateway_value">192.168.42.142</string>
-	<string name="usbconn_dns">DNS :  </string>
-	<string name="usbconn_dns_value">168.126.63.1</string>
-	<string name="usbconn_apply">Apply</string>
-	<string name="usbconn_reset">Reset</string>
-	<string name="usbconn_apply_toast">Apply Network Configuration...</string>
+	<string name="rtether_gateway">Gateway :  </string>
+	<string name="rtether_dns">DNS :  </string>
+	<string name="rtether_dns_value">8.8.8.8</string>
+	<string name="rtether_apply">Apply</string>
+	<string name="rtether_reset">Reset</string>
+	<string name="rtether_apply_toast">Apply Network Configuration...</string>
 
-	<string name="usbconn_desc">Connect internet via USB connection.
-With this, your mobile device can share your PC\'s (wired) network and access to internet via USB cable.
+	<string name="rtether_desc">Connect internet via Reverse WiFi/USB Tethering.
+With this, your mobile device can share your PC\'s (wired) network and access to internet via Wireless LAN or USB cable.
 \nIs it MOBILE? anyway I need it.
 </string>
-	<string name="usbconn_usage">Usage:
-\n\t0. enable USB tether of your device.
-\n\t1. enter IP address of USB interface of PC.
+	<string name="rtether_usage">Usage:
+\n\t0. enable WiFi/USB tether of your device.
+\n\t1. enter IP address of WiFi/USB interface of PC.
 \n\t    (Dynamic by default.)
 \n\t2. enter DNS address.
 \n\t    (default is last DNS using by device.)
 \n\non PC side:
-\n\t1. setup USB interface. (Dynamic)
+\n\t1. connect to device\'s WiFi/USB tether. (Dynamic)
 \n\t2. enable internet share.
-\n\t    (on linux, enable IP Forward/Masquerade.)
+\n\t    (on linux, enable IP Forward and Masquerade.)
 \n\t    $ echo 1 |sudo tee /proc/sys/net/ipv4/ip_forward
 \n\t    $ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 \n\nKnown Problems:
+\n\t* cannot connect to gtalk service.
 \n\t* cannot download apps from market.
 \n\t   (but market searching is working.)
 \n\t* can i determind peer address automatically?
