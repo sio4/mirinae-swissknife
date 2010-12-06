@@ -61,7 +61,7 @@ public class SwissKnifeRTether extends Activity implements OnClickListener {
 		/* get peer address from dnsmasq's log message. */
 		try {
 			String line;
-			String cmd = "logcat -d |busybox grep -v grep |busybox grep DHCPACK |busybox tail -1|busybox cut -d' ' -f4";
+			String cmd = "cat /data/misc/dhcp/dnsmasq.leases |busybox cut -d' ' -f3";
 			Process p = Runtime.getRuntime().exec(new String[] {"su", "-c", cmd});
 			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			while ((line = input.readLine()) != null) {
