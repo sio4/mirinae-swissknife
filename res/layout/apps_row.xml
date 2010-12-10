@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_gravity="center"
+	android:layout_height="wrap_content" android:layout_width="fill_parent"
+	android:paddingBottom="1dip" android:paddingTop="1dip">
+	<ImageView android:id="@+id/icon" android:layout_gravity="center"
+		android:layout_width="42px" android:layout_height="42px"
+		android:padding="3px"
+		android:src="@drawable/icon" />
+	<LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+		<TextView 	android:id="@+id/app_name" android:text="name"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="-4dip"
+			android:textAppearance="?android:textAppearanceSmall" />
+		<TextView 	android:id="@+id/app_packagename" android:text="package name"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="-4dip" android:textSize="10sp" />
+		<TextView 	android:id="@+id/app_filename" android:text="file name"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="-4dip" android:textSize="10sp" />
+	</LinearLayout>
+	<ImageView android:id="@+id/tag_system" android:layout_gravity="center_vertical"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:src="@drawable/tag_system" android:visibility="gone"/>
+	<CheckBox android:layout_gravity="center_vertical" android:id="@+id/app_chk" 
+		android:layout_width="40dip" android:layout_height="48dip"
+		android:focusable="false" android:focusableInTouchMode="false" />
+</LinearLayout>
