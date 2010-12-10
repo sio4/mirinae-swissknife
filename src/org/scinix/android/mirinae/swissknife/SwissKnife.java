@@ -33,6 +33,12 @@ public class SwissKnife extends TabActivity {
 		spec = tabHost.newTabSpec("usbconn").setIndicator("R Tether",
 				res.getDrawable(R.drawable.ic_tab_rtether)).setContent(intent);
 		tabHost.addTab(spec);
+
+		intent = new Intent().setClass(this, About.class);
+		spec = tabHost.newTabSpec("about").setIndicator("About",
+				res.getDrawable(R.drawable.ic_tab_about)).setContent(intent);
+		tabHost.addTab(spec);
+
 		tabHost.setCurrentTab(0);
 	}
 }

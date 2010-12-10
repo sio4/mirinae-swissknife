@@ -2,6 +2,26 @@
 <resources>
 	<string name="app_name">Mirinae SwissKnife</string>
 
+	<string name="about">Swiss Army Knife for Galaxy S.
+\nby Yonghwan SO
+\n\tscinix@gmail.com
+\n
+\n\thttp://sio4.tistory.com
+\n\thttp://twitter.com/scinix
+	</string>
+	<string name="features">Features:
+\n* Application Manager
+\n\t- remove some unused system apps with it.
+\n* System Tweak
+\n* Reverse Tethering
+\n - reverse tethering via WiFi/USB tethering.
+\n - with this, your device can access to internet via PC\'s network.
+\n - Issue #1: Market and GTalk are not working.
+	</string>
+	<string name="changelogs">Changelogs:
+\n* initial changelog: 2010-12-10
+	</string>
+
 	<string name="apps_label">System Apps</string>
 	<string name="apps_select">All or Nothing!</string>
 	<string name="apps_enable">Enable</string>
