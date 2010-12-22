@@ -11,15 +11,18 @@
 	</string>
 	<string name="features">Features:
 \n* Application Manager
-\n\t- remove some unused system apps with it.
+\n  - remove some unused system apps with it.
 \n* System Tweak
 \n* Reverse Tethering
-\n - reverse tethering via WiFi/USB tethering.
-\n - with this, your device can access to internet via PC\'s network.
-\n - Issue #1: Market and GTalk are not working.
+\n  - reverse tethering via WiFi/USB tethering.
+\n  - device can access to Internet via PC\'s network.
 	</string>
 	<string name="changelogs">Changelogs:
-\n* initial changelog: 2010-12-10
+\n* version 0.3 (2010-12-22)
+\n  - Add About tab. and... return to home from hospital.
+\n* version 0.1 (2010-12-10)
+\n  - Implement Reverse Tethering feature.
+\n  - Issue #1: Market and GTalk are not working.
 	</string>
 
 	<string name="apps_label">System Apps</string>
